@@ -21,7 +21,7 @@ candidate_labels = taxonomy_df["label"].dropna().tolist()
 
 def classify_text(text):
     result = classifier(text, candidate_labels, multi_label=True)
-    top_labels = result["labels"][:3] 
+    top_labels = result["labels"][:1] 
     return ", ".join(top_labels)
 
 print("Classifying companies... (this may take a while)")
@@ -55,5 +55,5 @@ print("Fișierul 'classified_companies.csv' a fost salvat.")
 #-niche
 #Other Heavy and Civil Engineering Construction
 #-insurance_label
-#Commercial Construction Services, Gas Installation Services, SEO Services
+#Commercial Construction Services
 
